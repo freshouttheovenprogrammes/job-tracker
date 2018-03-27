@@ -24,7 +24,7 @@ The rubric below describes additional functionality that you will need to add to
 
 ### Jobs
 
-- [ ] A user can create a job
+- [x] A user can create a job
 - [ ] A user can view a job
 - [ ] A user can update a job
 - [ ] A user can delete a job
@@ -97,9 +97,9 @@ The rubric below describes additional functionality that you will need to add to
 - [ ] The application has been styled.
 - [ ] The application uses a balanced, considered color scheme.
 - [ ] The application implements a font (that is not the default font).
-- [ ] The application utilizes a nav bar. 
-- [ ] The style shows evidence of intentional layout. 
-- [ ] Space and text is balanced. White space is used to visually separate content. 
+- [ ] The application utilizes a nav bar.
+- [ ] The style shows evidence of intentional layout.
+- [ ] Space and text is balanced. White space is used to visually separate content.
 - [ ] The application is easily usable. The user can intuitively navigate between different portions of the application without manually entering the URL into the nav-bar or using the back button on their browser.
 
 ### Testing
@@ -127,9 +127,9 @@ following criteria:
 
 ### 1. Feature Completeness
 
-* Exceeds Expectations: All features are correctly implemented along with two extensions 
-* Meets Expectations: All features defined in the assignment are correctly implemented 
-* Below Expectations: There are one or two features missing or incorrectly implemented 
+* Exceeds Expectations: All features are correctly implemented along with two extensions
+* Meets Expectations: All features defined in the assignment are correctly implemented
+* Below Expectations: There are one or two features missing or incorrectly implemented
 
 ### 2. Views
 
@@ -159,7 +159,7 @@ following criteria:
 
 * Exceeds Expectations: Project has a running test suite that covers all functionality, exercises the application at multiple levels, and covers edge cases
 * Meets Expectations: Project has a running test suite that tests at functionalty, at multiple levels
-* Below Expectations: Project has sporadic use of tests 
+* Below Expectations: Project has sporadic use of tests
 
 ### 7. Usability
 
