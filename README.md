@@ -25,7 +25,7 @@ The rubric below describes additional functionality that you will need to add to
 ### Jobs
 
 - [x] A user can create a job
-- [ ] A user can view a job
+- [x] A user can view a job
 - [ ] A user can update a job
 - [ ] A user can delete a job
 
