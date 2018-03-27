@@ -1,5 +1,5 @@
 class JobsController < ApplicationController
-  before_action :set_job_params, only: [:show, :edit]
+  before_action :set_job_params, only: [:show, :edit, :update]
 
   def index
     @company = Company.find(params[:company_id])
@@ -29,7 +29,13 @@ class JobsController < ApplicationController
   end
 
   def update
-    # implement on your own!
+    @job.update(job_params)
+    if @job.save
+      flash[:success] = "#{@job.title} was updated!"
+      redirect_to company_job_path(@company, @job)
+    else
+      render :edit
+    end
   end
 
   def destroy
