@@ -6,10 +6,10 @@ describe "As a user" do
       company = Company.create!(name: "Real Company")
 
       visit company_path(company)
-      save_and_open_page
+
       click_link "Add Job"
 
-      expect(current_path).to eq(new_company_job)
+      expect(current_path).to eq(new_company_job_path(company))
     end
   end
 end
