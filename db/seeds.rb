@@ -7,11 +7,7 @@ JOBS = ["Engineering", "Development", "Dev Ops", "Quality Assurance", "Teacher",
 CITIES = ["Seattle", "Denver", "Portland", "Indianapolis", "Madison", "Orlando", "San Diego", "Austin", "Las Vegas", "Little Rock", "Boise", "Eugene", "Oakland"]
 CATEGORIES = %w(Accounting Executive Manufacturing Admin Clerical Franchise Nonprofit Finance Government PartTime Business HealthCare Retail)
 
-def categories
-  CATEGORIES.map do |title|
-    Category.create!(title: title)
-  end
-end
+categories = CATEGORIES.map { |title| Category.create!(title: title) }
 
 COMPANIES.each do |name|
   company = Company.create!(name: name)
