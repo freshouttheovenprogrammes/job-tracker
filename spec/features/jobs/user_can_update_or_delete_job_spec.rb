@@ -4,7 +4,8 @@ describe "As a user" do
   context "when I arrive at the job show page" do
     it "I can edit a jobs name" do
       company = Company.create!(name: "Company name")
-      job = Job.create!(title: "Its a job", description: "Jobby", level_of_interest: 99, city: "Mexico City", company_id: company.id)
+      category = Category.create!(title: "cat")
+      job = Job.create!(title: "Its a job", description: "Jobby", level_of_interest: 99, city: "Mexico City", company: company, category: category)
 
       visit company_job_path(company, job)
 
