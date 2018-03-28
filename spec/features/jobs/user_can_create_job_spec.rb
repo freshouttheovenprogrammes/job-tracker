@@ -4,6 +4,8 @@ describe "As a user" do
   context "when I visit a companies page" do
     it "I can create a new job" do
       company = Company.create!(name: "Real Company")
+      Category.create!(title: "Category")
+      Category.create!(title: "Category2")
 
       visit company_path(company)
 
@@ -15,6 +17,8 @@ describe "As a user" do
       fill_in "job[description]", with: "Its a Job!"
       fill_in "job[level_of_interest]", with: 90
       fill_in "job[city]", with: "Denver"
+      find(:xpath, '//select[@id="job_category_id"]/option[2]').select_option
+      save_and_open_page
 
       click_on "Create Job"
       job = company.jobs.first
@@ -23,6 +27,8 @@ describe "As a user" do
     end
     it "I can view a single job after its been created" do
       company = Company.create!(name: "Real Company")
+      Category.create!(title: "Category")
+      Category.create!(title: "Category2")
 
       visit company_path(company)
 
@@ -34,13 +40,14 @@ describe "As a user" do
       fill_in "job[description]", with: "Its a Job!"
       fill_in "job[level_of_interest]", with: 90
       fill_in "job[city]", with: "Denver"
+      find(:xpath, '//select[@id="job_category_id"]/option[2]').select_option
 
       click_on "Create Job"
       job = company.jobs.first
 
       visit company_path(company)
       click_link job.title
-      
+
       expect(current_path).to eq company_job_path(company, job)
       expect(page).to have_content "#{job.title}"
       expect(page).to have_content "#{job.description}"
