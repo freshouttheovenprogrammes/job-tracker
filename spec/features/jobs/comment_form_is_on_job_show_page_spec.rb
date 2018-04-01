@@ -9,8 +9,8 @@ describe "When user is on show page" do
 
     expect(page).to have_content "Comments"
 
-    fill_in "job[comment]", with: "This is a test"
-    click_on "Submit Comment"
+    fill_in "comment[content]", with: "This is a test"
+    click_on "Submit"
 
     expect(current_path).to eq company_job_path(company, job)
     expect(page).to have_content "This is a test"
