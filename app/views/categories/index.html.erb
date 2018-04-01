@@ -1,0 +1,6 @@
+<h3>All Categories</h3>
+
+<% @categories.each do |c| %>
+<%= c.title %><br>
+<%= link_to "Delete", method: :delete %>
+<% end %>
