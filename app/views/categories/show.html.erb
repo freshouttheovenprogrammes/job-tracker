@@ -1,0 +1,6 @@
+<h1> <%= @category.title %> Main Page </h1>
+
+<h3><%= @category.title %> Jobs</h3>
+<% @category.jobs.each do |job| %>
+  <%= job.title %>
+<% end %>
