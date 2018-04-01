@@ -1,5 +1,5 @@
 class CategoriesController < ApplicationController
-  before_action :set_category_params [:show, :edit, :update, :destroy]
+  before_action :set_category_params, only: [:show, :edit, :update, :destroy]
 
   def new
     @category = Category.new

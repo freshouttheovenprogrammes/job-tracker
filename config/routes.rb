@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root to: "companies#index"
-  resources :categories, only: [:new, :create, :show, :index]
+  resources :categories, only: [:new, :create, :edit, :show, :index]
   resources :companies do
     resources :jobs
   end
