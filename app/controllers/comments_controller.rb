@@ -16,8 +16,4 @@ class CommentsController < ApplicationController
   def comment_params
     params.require(:comment).permit(:content)
   end
-  #
-  # def set_comment_params
-  #   @job = Job.find(params[:id])
-  # end
 end
