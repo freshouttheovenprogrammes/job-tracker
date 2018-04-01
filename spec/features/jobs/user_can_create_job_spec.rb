@@ -18,7 +18,6 @@ describe "As a user" do
       fill_in "job[level_of_interest]", with: 90
       fill_in "job[city]", with: "Denver"
       find(:xpath, '//select[@id="job_category_id"]/option[2]').select_option
-      save_and_open_page
 
       click_on "Create Job"
       job = company.jobs.first
