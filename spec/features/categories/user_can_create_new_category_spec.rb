@@ -7,10 +7,10 @@ describe "As a User" do
     click_link "Create New Category"
 
     expect(current_path).to eq new_category_path
-    expect(page).to have_content "Create Category"
+    expect(page).to have_content "Create A New Category"
 
-    fill_in "category[name]", with: "New Category"
-    click_on "Submit"
+    fill_in "category[title]", with: "New Category"
+    click_on "Create Category"
 
     expect(page).to have_content "New Category"
   end
